@@ -24,15 +24,13 @@ function Home() {
       </div>
       <div
         className="d-flex align-items-center justify-content-center m-4"
-        style={{}}
       >
         <div className="logo">
           <img src="../src/assets/logo.png" className="logo" />
         </div>
         <div className="logoText">
           <a
-            className="text-center text-decoration-none"
-            style={{ color: "#ffffff", fontWeight: 600 }}
+            className="text-center text-decoration-none home-heading"
           >
             Weather App
           </a>
@@ -44,17 +42,10 @@ function Home() {
             <input
               type="text"
               className="form-control"
-              style={{ backgroundColor: "#1f2128", border: "none" }}
               placeholder="Enter a city"
             />
             <button
-              className="btn btn-primary"
-              style={{
-                backgroundColor: "#6c5dd3",
-                border: "none",
-                borderRadius: "8px",
-                zIndex: 100,
-              }}
+              className="btn btn-primary add-city-btn"
               type="button"
             >
               Add City
@@ -63,20 +54,14 @@ function Home() {
         </div>
       </center>
       <div
-        className="container"
-        style={{ display: "flex", alignItems: "center" }}
+        className="container container-sub"
       >
         <div className="mx-auto">
           <div className="row mx-auto d-flex">
             {weatherData?.map((item) => (
               <div id="card-0" className="col-md-5" key={item.CityCode} onClick={()=>handleNavigation(item)}>
                 <div
-                  className="card mx-auto"
-                  style={{
-                    backgroundColor: "#388ee7",
-                    width: "400px",
-                    border: "none",
-                  }}
+                  className="card mx-auto mx-auto-card"
                 >
                   <div>
                     <img
@@ -108,7 +93,6 @@ function Home() {
                             <a
                               className="card-text text-white text-decoration-none ms-2"
                               id="city-description-0"
-                              style={{ fontWeight: 380 }}
                             >
                               {item.Status}
                             </a>
@@ -153,7 +137,6 @@ function Home() {
                   </div>
                   <div
                     className="card-body d-flex"
-                    style={{ backgroundColor: "#383b47" }}
                   >
                     <div className="align-self-center ms-3 pb-3">
                       <div className="mt-2">
@@ -186,8 +169,7 @@ function Home() {
                     </div>
                     <div className="ms-3 mt-2">
                       <div
-                        className="d-flex ms-2"
-                        style={{ height: "50px", color: "#ffffff" }}
+                        className="d-flex ms-2 d-flex-ms-2"
                       >
                         <div className="vr" />
                       </div>
@@ -207,8 +189,7 @@ function Home() {
                     </div>
                     <div className="mt-2">
                       <div
-                        className="d-flex ms-3"
-                        style={{ height: "50px", color: "#ffffff" }}
+                        className="d-flex ms-3 d-flex-ms-3"
                       >
                         <div className="vr" />
                       </div>
@@ -241,7 +222,6 @@ function Home() {
         <div className="text-center p-3" style={{ backgroundColor: "#30333d" }}>
           <a
             className="fw-normal text-decoration-none"
-            style={{ color: "#ffffff", opacity: "0.5" }}
           >
             2021 Fidenz Technologies
           </a>

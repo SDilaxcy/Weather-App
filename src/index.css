@@ -61,6 +61,7 @@ body {
 .card-body{
     margin-top: 55px;
     height: 100px;
+    background-color: #383b47;
 }
 
 
@@ -151,4 +152,51 @@ body {
   left: 20%;
   position: relative;
 
+}
+
+.home-heading{
+  color: #fff;
+  font-weight: 600;
+}
+
+.form-control{
+  background-color: #1f2128;
+  border: none;
+}
+
+.add-city-btn{
+  background-color: #6c5dd3;
+  border: none;
+  border-radius: '8px';
+  z-index: 100;
+}
+
+.container-sub{
+  display: flex;
+  align-items: center;
+}
+
+.mx-auto-card{
+  background-color: #388ee7;
+  width: '400px';
+  border: none;
+}
+
+#city-description-0{
+  font-weight: 300;
+}
+
+.d-flex-ms-2{
+  height: '50px';
+  color: #fff;
+}
+
+.d-flex-ms-3{
+  height: '50px';
+  color: #fff;
+}
+
+.fw-normal{
+  columns: #fff;
+  opacity: 0.5;
 }

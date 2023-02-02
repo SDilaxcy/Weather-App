@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import axios from "axios"
 import { useState } from "react";
+import ApiConstants from "./shared/apiConstants";
 
 function SingleWeather() {
   let weatherID;
-  const apiKey = "c13b323c1c6affe4f58d5f6beac65f5f";
+  const apiKey = import.meta.env.VITE_API_KEY;
   const units = "metric";
   var cityData = [];
   const dataCache = new Map();
@@ -33,7 +34,7 @@ function SingleWeather() {
     // Assignment step 04
     // If data is not in cache mechanism or has expired, make an API request.
     axios.get(
-      `http://api.openweathermap.org/data/2.5/group?id=${cityIds}&units=${units}&appid=${apiKey}`
+      `${ApiConstants.GET_WEATHER_API}/group?id=${cityIds}&units=${units}&appid=${apiKey}`
     )
       .then((response) => (setData(response.data.list[0])))
       .then((response) => {
